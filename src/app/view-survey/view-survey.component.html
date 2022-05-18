@@ -1,0 +1,152 @@
+<!-- Aastha Neupane
+Achint Jain
+Kaustubh Karanjkar
+Niyanta Lad  -->
+
+<!DOCTYPE html>
+<html>
+
+<!--This is a  Survey page that allows prospective students to provide
+feedback about their campus visit.-->
+
+<head>
+    <title>CS Department Survey</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <h2>
+        <div class="w3-container" id="home">
+            <div class="survey-form" id="breadcrumb-header">
+                Survey form of {{survey.fname}} {{survey.lname}}
+            </div>
+        </div>
+    </h2>
+   
+    <div *ngIf="isDataAvailable"> 
+    <!--a form with text boxes using appropriate input types for the user name, street address, city, state, zip, telephone number, e-mail, URL, and date of survey.-->
+    <p><span class="required">*</span>: Required fields</p>   
+         <form #surveyForm="ngForm" name="surveyForm" id="surveyform" action="#" id="form"  autocomplete="on" >
+            <div id="error"></div>
+            <div class="effect2">        
+                <!--autocomplete attribute for the entire survey form that will allow the user to automatically fill in his/her information (e.g., name, address, email, telephone, etc.) based on previous input.-->
+
+                <p>   
+                    <label>First Name:<span class="required">*</span>
+                        <!--required attribute for fields as appropriate that forces the user to enter or select a value before submitting the form.-->
+                        <input readonly ngModel #fname="ngModel" name="fname" id='fname' placeholder={{survey.fname}} type="text" size="25" maxlength="30" >
+                        <!--automatically providing the focus in the first text field on the form to allow the user to begin typing in that field immediately. -->
+                    </label>
+                </p> 
+
+                <p>
+                <label>Last Name:<span class="required">*</span>
+                        <!--required attribute for fields as appropriate that forces the user to enter or select a value before submitting the form.-->
+                        <input readonly ngModel #lname="ngModel" name="lname" id='lname' placeholder={{survey.lname}} type="text" size="25" maxlength="30" >
+                        <!--automatically providing the focus in the first text field on the form to allow the user to begin typing in that field immediately. -->
+                    </label>
+                </p>
+
+                <p>
+                    <label>Street Address:
+                        <span class="required">*</span>
+                        <input readonly ngModel #address="ngModel" id="address" name="address" placeholder={{survey.address}}  type="text" size="25"
+                            maxlength="30" >
+                    </label>
+                </p>
+          
+                <p>
+                    <label>City:
+                        <span class="required">*</span>
+                        <input readonly ngModel #city="ngModel" name="city" id='city' placeholder={{survey.city}} type="text"
+                            size="25" maxlength="30" >
+                    </label><br>
+                </p>
+          
+                <p>
+                    <label>State:
+                        <span class="required">*</span>
+                        <input readonly ngModel #state="ngModel" name="state" id='state' placeholder={{survey.state}} type="text" size="25" maxlength="30" >
+                    </label><br>
+                </p>
+
+                <p>
+                    <label> Zipcode:
+                        <span class="required">*</span>
+                        <input readonly ngModel #zip="ngModel" id='zip' name="zip" placeholder={{survey.zip}} type="text" size="15"
+                            maxlength="30" >
+                    </label>
+                </p>
+
+                <p>  <!--pattern="\(\d{3}\) +\d{3}-\d{4}"-->
+                    <label>Telephone Number: <span class="required">*</span>
+                        <input  readonly ngModel #tel="ngModel" id="tel" name="tel" type="tel" placeholder={{survey.tel}}>     
+                        (###) ###-####
+                    </label>
+                </p>
+          
+                <p>
+                    <label>E-mail Address: <span class="required">*</span>
+                        <input  readonly ngModel #email="ngModel" id="email" name="email" type="email" placeholder={{survey.email}} >
+                    </label>
+                </p>
+            </div>
+            <div class="effect2">
+                
+                <strong for="liked">Things you liked the most about the campus:</strong><br />
+                    <!--checkboxes that allow prospective students to indicate what they liked most about the campus.-->
+                    <div *ngFor="let like of likes">
+                        <label>{{like.name}}
+                            <input readonly [checked]="like.selected" class="w3-check" name="liked" type="checkbox">
+                        </label>
+                    </div>
+
+            </div>
+            <div class="effect2">
+            
+                    <strong>Why did you choose to attend this university?</strong><br /><br />
+                    <!--radio buttons that ask the prospective students how they became interested in the university. -->
+                    <!--check boxes and radio buttons can be activated by clicking on the respective labels-->
+            <div>
+                    <label>
+                        <input [(ngModel)]="survey.choose" id="radio1" name="choose" type="radio" value="Friends" />Friends</label><br><br />
+                    <label>
+                        <input [(ngModel)]="survey.choose"  id="radio2" name="choose" type="radio" value="Television" />Television</label><br><br />
+                    <label>
+                        <input [(ngModel)]="survey.choose"  id="radio3" name="choose" type="radio" value="Internet" />Internet</label><br><br />
+                    <label>
+                        <input [(ngModel)]="survey.choose"  id="radio4" name="choose" type="radio" value="Other" />Other</label><br><br />
+                </div>
+            </div>
+
+            <div class="effect2">
+                <label><b>How would you recommend this school to other prospective students?</b><br><br></label>
+
+                <select name="rating" [(ngModel)]="survey.rating"> 
+                    <option *ngFor="let rate of ratings" [value]="rate.value">{{rate.name}}</option> 
+                </select> 
+            </div>
+
+            <div class="effect2"> 
+                <div>
+                    <!--text area for additional comments-->
+                    <label><b>Comments:</b><br><br>
+                        <textarea ngModel name="comments" placeholder={{survey.comments}} rows="4" cols="36"></textarea>
+                    </label>
+                </div> <br>
+
+                <div>
+                    <label><b>Date of survey:<span class="required">*</span></b>
+                        <input ngModel name="date" id="date" placeholder={{survey.date}} />
+                    </label>
+                </div>
+            </div>
+            <div>
+                <button (click)="return()">Return </button> 
+            </div>
+            <br><br>
+
+        </form>
+    </div>
+</body>

@@ -1,0 +1,197 @@
+/* Aastha Neupane
+Achint Jain
+Kaustubh Karanjkar
+Niyanta Lad */
+    
+    
+    
+    
+    /*Externalstylesheet*/
+    @media all
+    {
+    html {
+    /* width: 80%; */
+    background: #123b22;
+    /* background-image: url(../src/assets/images/logo.png); */
+    background-attachment: fixed;
+    }
+    }
+    #cs-logo:hover {
+    width: 1000%;
+    max-width: 500px;
+    padding: 0.75em 53.5em;
+    padding-left: 0%;
+    display: block;
+    /* background-image: url(../src/assets/images/footer.jpg) ; */
+    }
+
+    #breadcrumb-header {
+    padding: 0.25em 1em;
+    background: #f9ab4f;
+    -webkit-box-shadow: 0px 1px 1px rgb(0 0 0 / 5%);
+    -moz-box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 1px rgb(0 0 0 / 5%);
+    }
+
+    a {
+    text-indent: 1em;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+    }
+
+    li { font-weight: bold }
+    /*h1 elements in GMU Green (#006633)*/
+    h1 { color: #006633;
+    }
+
+    datalist:hover    {display: block;
+    background: red;}
+
+    ul { margin-left: 2%;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 15pt;
+    padding-bottom:2%;
+    }
+
+    /*George Mason University Logo as an image link to the GMU Website fixed on the right-bottom portion of your Web page. */
+    body {
+        height: 100%;
+        line-height:1;
+        font-family: arial, helvetica, sans-serif;
+        /* background-image: url(../src/assets/images/mason-logo.png); */
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    /*The body of the window rendering the page has a light gray background*/
+        background-color:hsla(180, 7%, 83%, 0.898);
+    }
+
+    .fix
+    {
+    position: fixed;
+    bottom: 0px;
+    right: 0%;
+    }
+
+    p { color: black;
+    font-size: 14pt;
+    text-indent: 1em;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: justify;
+    font-family:'Times New Roman', Times, serif;
+    }
+
+    .dark { font-weight: bold }
+
+    td {
+    height: 80px;
+    vertical-align:middle;
+    }
+
+    /*making use of the George Mason University color scheme in some way.*/
+    th {
+    background-color: #006633;
+    color: #ffcc33;
+    }
+
+    tfoot {
+    background-color: #006633;
+    color: #f9ab4f;
+    text-align: center;
+    font-weight: bold
+    }
+
+    tr{
+    background-color: azure;
+    }
+
+    table{
+    margin: 0px auto;
+    font-size: 14pt;
+    table-layout:fixed;
+    border-collapse: inherit;
+    text-align: center;
+    }
+
+    h3{
+    margin-left: 2%;
+    color: #006633;
+    }
+
+    .headings{
+    text-shadow: -4PX 4px 6px rgb(141, 140, 140);
+    text-align: center;
+    font-size:xx-large;
+    }
+
+    /*heading at the top of the page inside a rectangular box with a solid border in GMU green (#006633) and 5px width.*/
+    #box
+    {
+    background-color: azure;
+    box-shadow: 0 10px 6px -6px  ;
+    margin: 2%;
+    border: #006633 5px solid;
+    }
+
+    .effect1
+    {
+    background:azure;
+    width:98%;
+    margin:2px;
+    margin-bottom: 5%;
+    -webkit-box-shadow:0 10px 4px rgba(0, 0, 0, 0.3), 0 0px 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 10px 4px rgba(0, 0, 0, 0.3), 0 0px 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 10px 4px rgba(0, 0, 0, 0.3), 0
+    0px 40px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    .effect2
+    {
+    background:azure;
+    width:90%;
+    margin:30px;
+    padding: 20px;
+    box-shadow:5px 10px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .para
+    {
+    margin-left: 3.5%;
+    }
+
+    .required {
+    color: red;
+    }
+
+    /* mouse over link */
+    a:hover {
+    color: red;
+    font-family: monospace;
+    text-decoration: underline;
+    }
+
+    /* selected link */
+    a:active {
+    color: yellow;
+    font-family: monospace;
+    }
+
+    input:hover {
+    font-family: monospace;
+    }
+
+    .bgimg-5
+    {
+    /* background-image: url("../src/assets/images/footer.jpg"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 400px;
+    }
+
+    .alert-danger {
+        background-color: #f2dede;
+        border-color: #ebccd1;
+        color: #a94442;
+      }

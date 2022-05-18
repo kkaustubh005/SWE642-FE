@@ -1,0 +1,38 @@
+/* Aastha Neupane
+Achint Jain
+Kaustubh Karanjkar
+Niyanta Lad */
+    
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:  #123b22;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+  html {
+    /* width: 80%; */
+    background: #f9ab4f;
+    /* background-image: url(../src/assets/images/logo.png); */
+    background-attachment: fixed;
+    /* font-family: arial, helvetica, sans-serif; */
+    /* height: 100%; */
+    }
